@@ -92,7 +92,7 @@ console.log(runnersLargeSizeShirt);
 const ticketPriceTotal = runners.reduce(function (accumulator, currentValue) {
   return accumulator + currentValue.donation;
 },0)
-console.log(ticketPriceTotal)
+console.log(`$${ticketPriceTotal}`)
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could 
@@ -100,7 +100,22 @@ console.log(ticketPriceTotal)
 //array methods listed above.
 
 // Problem 1
+// Anyone that donated 200 or more will receieve a free hat.
+let freeHatArray = []
+let freeHat = runners.filter (hat => hat.donation >= 200)
+freeHatArray.push(freeHat)
+
+console.log(freeHat)
+
 
 // Problem 2
+// from the new freeHat array pull just the last names 
+console.log()
+let runnerLastName = []
+
+freeHat.forEach(rlv => {
+  return runnerLastName = rlv.last_name
+})
+console.log(runnerLastName)
 
 // Problem 3
