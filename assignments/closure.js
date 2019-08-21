@@ -4,20 +4,15 @@
 // that manipulates variables defined in the outer scope.
 // The outer scope can be a parent function, or the top level of the script.
 
-const a = "car"
-myOwn = ()=>{
-  console.log (`I just bought a ${a}`)
-  //  will not work can't pass values up------ console.log (`I just bought a ${c}`)
-  mySec = () => {
-    const c = "plane"
-    console.log(`I sold my${b}`)
-  }//closes mySec
-}//closes myOwn
-
-const b = "boat"
-
-myOwn()
-mySec()
+function outerFunc(){
+  let searchEngine  = "google";
+  
+  return function(){
+    console.log (`just ${searchEngine} it`)
+  }
+}
+var say = outerFunc();
+say();
 
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
