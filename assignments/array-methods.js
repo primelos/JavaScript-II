@@ -108,7 +108,15 @@ console.log(freeHat)
 
 
 // Problem 2
-// from the new freeHat array pull just the last names 
-
-
+// A investor wants to donate $200 on any donation of $200 or more
+const donDouble = freeHat.map(function (double){
+  return double.donation + 200 
+})
+console.log(donDouble)
 // Problem 3
+
+const donationTotal = donDouble.reduce(function (a, value){
+  return a + value;
+}, 0)
+ console.log(donationTotal);
+ 
